@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+
+
+  <div class="libCont">
+    <div class="header">
+      <h1>My Book List</h1>
+      <button id="addBook" class="addBook"><i class="fa-solid fa-plus"></i></button>
+    </div>
+
+
+    <dialog id="modal" class="modal">
+     
+      <form action="">
+        <button id="close" type="reset" class="close">x</button>
+        <div class="modalContainer">
+          
+          <h1 style="color:black">New Book</h1>
+          <div class="inputContainer">
+            <input type="text" id="bookName" required>
+            <label for="bookName" class="label">Book Name</label>
+          </div>
+          <div class="inputContainer">
+          
+            <input type="text" id="bookAuthor" required>
+            <label for="bookAuthor" class="label">Book Author</label>
+          </div>
+          <div class="inputContainer">
+          
+            <input type="number" id="bookPages" required>
+            <label for="bookPages" class="label">Book Pages</label>
+          </div>
+          <div class="inputContainer">
+           <label for="bookPages">Book Read?</label>
+            <input type="checkbox" id="bookRead" >
+           
+          </div>
+          <button type="submit" id="addBtn" formmethod="dialog">Add</button>
+        </div>
+
+
+      </form>
+    </dialog>
+
+
+    <dialog id="editModal" class="modal">
+      
+      <form action="">
+        <div class="modalContainer">
+          <button id="editClose" type="reset" class="close">x</button>
+          <h1 style="color:black">Edit Book</h1>
+          <div class="inputContainer">
+            
+            <input type="text" id="editBookName" required>
+            <label for="bookName" class="label labelEdit">Book Name</label>
+          </div>
+
+          <div class="inputContainer">
+            
+            <input type="text" id="editBookAuthor" required>
+            <label for="bookAuthor" class="label labelEdit">Book Author</label>
+          </div>
+
+          <div class="inputContainer">
+            
+            <input type="text" id="editBookPages" required>
+            <label for="bookPages"class="label labelEdit">Book Pages</label>
+          </div>
+          <div class="inputContainer inputCheck">
+            <label for="bookRead">Book Read?</label>
+            <input type="checkbox" id="editBookRead">
+          </div>
+          <button type="submit" id="editBtn">Edit</button>
+        </div>
+      </form>
+    </dialog>
+
+
+    <div id="bookList" class="bookList">
+      <p class="teste"  >Ready to transform your empty library into a world of wonders? Just tap the <strong>'+'</strong> in the corner, and let the book magic begin! 📚✨!</p>
+    </div>
+  </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
